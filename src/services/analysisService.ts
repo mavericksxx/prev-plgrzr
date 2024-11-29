@@ -1,7 +1,6 @@
 import { AnalysisResult } from '../types/analysis';
 
-// Mock service to simulate backend processing
-export const analyzeDocument = async (file: File): Promise<AnalysisResult> => {
+export const analyzeDocument = async (original: File, comparison: File): Promise<AnalysisResult> => {
   // Simulate processing delay
   await new Promise(resolve => setTimeout(resolve, 2000));
 
